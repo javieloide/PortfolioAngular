@@ -1,0 +1,37 @@
+<div class="contact_form">
+  <div class="formulario">
+      <h1>Formulario de contacto</h1>
+        <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+                <p>
+                  <label for="email" class="colocar_email">Email
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="email" name="email"  [(ngModel)]="email" id="email" placeholder="Escribe tu Email" required>
+                </p>
+                <p>
+                  <label for="asunto" class="colocar_asunto">Asunto
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="subject"  [(ngModel)]="subject" id="assunto"  placeholder="Escribe un asunto" required>
+                </p>
+
+                <p>
+                  <label for="mensaje" class="colocar_mensaje">Mensaje
+                    <span class="obligatorio">*</span>
+                  </label>
+                  <textarea name="description" class="texto_mensaje"  [(ngModel)]="description"  id="mensaje"  placeholder="Deja aquí tu comentario..." required></textarea>
+                </p>
+
+                <button (click)="sendEmail(email,subject,description)" [hidden]="email.length<=3 || subject.length<=3">Guardar</button>
+
+                <p class="aviso">
+                  <span class="obligatorio"> * </span>los campos son obligatorios.
+                </p>
+    </div>
+
+
+  </div>
+
+  <h2>Informacion extra</h2><br>
+  <h4>Telefono: 655 16 78 84</h4>
+  <h4>Ubicacion: Badajoz 06007</h4>
